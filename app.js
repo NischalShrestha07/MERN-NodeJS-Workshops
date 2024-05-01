@@ -21,7 +21,7 @@ app.get("/about",(req,res)=>{
     // API Form
     // res.send("<h1>I am From about File.</h1>")
     res.json({
-        nischal:"I am from home Page",
+        nischal:"I am from Denmark Page",
         address:"Nepal",
         birth:"India",
         birth:"Jhapa"
