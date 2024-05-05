@@ -1,36 +1,35 @@
-const app=require("express")()
+const app = require("express")()
 
 
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
     // res.send("Hello brother Welcome here I am from home page")
-        res.json({
-        nischal:"We are at / location.Welcome",
-        status:"i am a Student."
+    res.json({
+        nischal: "We are at / location.Welcome",
+        status: "i am a Student."
     })
-})   
+})
 
-app.get("/contact",(req,res)=>{
+app.get("/contact", (req, res) => {
     res.send("I am From Contact File.")
 })
 
-// API Examples
+// API Example
 //  http://localhost:/about
 //  http://localhost:/contact
 
-app.get("/about",(req,res)=>{   
+app.get("/about", (req, res) => {
     // API Form
     // res.send("<h1>I am From about File.</h1>")
     res.json({
-        nischal:"I am from Denmark Page",
-        address:"Nepal",
-        birth:"India",
-        birth:"Jhapa"
-    })          
+        nischal: "I am from Denmark Page",
+        address: "Nepal",
+        birth: "India",
+        birth: "Jhapa"
+    })
 })
 
-app.listen(3000,(req,res)=>{
-console.log("NodeJS has started at port 3000");
+app.listen(3000, (req, res) => {
+    console.log("NodeJS has started at port 3000");
 
 })
 
-   
