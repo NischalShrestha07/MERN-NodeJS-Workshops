@@ -25,7 +25,7 @@ app.get("/about",(req,res)=>{
         address:"Nepal",
         birth:"India",
         birth:"Jhapa"
-    })
+    })          
 })
 
 app.listen(3000,(req,res)=>{
@@ -33,4 +33,4 @@ console.log("NodeJS has started at port 3000");
 
 })
 
-  
+   
