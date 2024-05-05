@@ -13,7 +13,7 @@ app.get("/contact", (req, res) => {
     res.send("I am From Contact File.")
 })
 
-// API Example
+// API Examples
 //  http://localhost:/about
 //  http://localhost:/contact
 
