@@ -31,5 +31,5 @@ app.get("/about", (req, res) => {
 app.listen(3000, (req, res) => {
     console.log("NodeJS has started at port 3000");
 
-}
+})
 
