@@ -49,6 +49,21 @@ app.get("/", (req, res) => {
     })
 })
 
+// GET API  named as /stdDetails(All Details)
+app.get("/details", async (req, res) => {
+    const details = await Details, find()
+    if (details.length == 0) {
+        res.status(404).json({
+            message: "Empty Blogs"
+        })
+    }
+    else {
+        res.status(200).json({
+            message: "Blogs Feteched SuccessFully",
+            data: details
+        })
+    }
+})
 
 app.listen(2000, () => {
     console.log("NodeJS has startedin port 2000");
