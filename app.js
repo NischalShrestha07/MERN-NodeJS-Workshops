@@ -51,7 +51,7 @@ app.get("/", (req, res) => {
 
 // GET API  named as /stdDetails(All Details)
 app.get("/details", async (req, res) => {
-    const details = await Details, find()
+    const details = await Details.find()
     if (details.length == 0) {
         res.status(404).json({
             message: "Empty Blogs"
