@@ -35,6 +35,7 @@
 
 const express = require("express")
 const { connectDatabase } = require("./database/database")
+const Details = require("./model/blogModel")
 const app = express()
 
 app.use(express.json())
@@ -53,19 +54,17 @@ app.get("/", (req, res) => {
 // GET API  named as /stdDetails(All Details)
 app.get("/details", async (req, res) => {
     const details = await Details.find()
-    if (details.length == 0) {
+    if (blogs.length == 0) {
         res.status(404).json({
-            message: "Empty Blogs"
+            message: "Empty DetailsBlog."
         })
-    }
-    else {
+    } else {
         res.status(200).json({
-            message: "Blogs Feteched SuccessFully",
+            message: "Details Fetched Successfully.",
             data: details
         })
     }
 })
-
 
 // create garnne details haru
 app.post("/createDetails", async (req, res) => {
