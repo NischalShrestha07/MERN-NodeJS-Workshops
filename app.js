@@ -45,7 +45,7 @@ app.use(express.urlencoded({ extended: true }))
 app.get("/", (req, res) => {
     res.json({
         status: 500,
-        message: "You will be sucessful"
+        message: "You suceceed"
     })
 })
 
@@ -65,6 +65,23 @@ app.get("/details", async (req, res) => {
     }
 })
 
+
+// create garnne details haru
+app.post("/createDetails", async (req, res) => {
+    const title = req.bosy.title
+    const subTitle = req.body.subTitle
+    const description = req = req.body.description
+
+    await Details.create({
+        title: title,
+        subTitle: subTitle,
+        description: description
+    })
+    res.json({
+        status: 500,
+        message: "Detail Created Successfully."
+    })
+})
 app.listen(2000, () => {
     console.log("NodeJS has startedin port 2000");
 })
