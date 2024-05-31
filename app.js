@@ -34,13 +34,14 @@
 // })
 
 const express = require("express")
+const { connectDatabase } = require("./database/database")
 const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 
-
+connectDatabase()
 // database Connection
 app.get("/", (req, res) => {
     res.json({
@@ -68,9 +69,9 @@ app.get("/details", async (req, res) => {
 
 // create garnne details haru
 app.post("/createDetails", async (req, res) => {
-    const title = req.bosy.title
-    const subTitle = req.body.subTitle
-    const description = req = req.body.description
+    const title = req.bosy.title;
+    const subTitle = req.body.subTitle;
+    const description = req.body.description;
 
     await Details.create({
         title: title,
